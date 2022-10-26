@@ -8,7 +8,7 @@ def renderTextWrap(text, font, color, allowedWidth, window, x, y, shiftInY):
     widthOfString = 0
     oldWords = ""
     for index, amount in enumerate(words):
-        renderTest = font.render(amount,True,color)
+        renderTest = font.render(" " + amount,True,color)
         widthOfCurrentWord = renderTest.get_width()
         if widthOfString + widthOfCurrentWord > allowedWidth:
             listOfStrings2.append(str(oldWords))
